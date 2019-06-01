@@ -15,19 +15,33 @@ public class MyDemoLoggingAspect {
 
     //#################################################################################
     // Bu ornekte ki asıl olay pointcut declaration yaparak aynı pointcuti kullanmak
+    //
+    // Son guncelleme ile pointcutlari logic operatorler ile combine ettik.
+    //
     //#################################################################################
 
     @Pointcut("execution(* com.mcg.aopdemo.dao.*.*(..))")// in package in any class and any method
     private void forDaoPackage(){}
 
+    // create pointcut for getter methods
+    @Pointcut("execution(* com.mcg.aopdemo.dao.*.get*(..))")// in package all getter methods
+    private void getter(){}
 
-    @Before("forDaoPackage()")
+    // create pointcut for setter methods
+    @Pointcut("execution(* com.mcg.aopdemo.dao.*.set*(..))")// in package all setter methods
+    private void setter(){}
+
+    // create point: include package ... exclude getter/setter
+    @Pointcut("forDaoPackage() && !(getter() || setter())")
+    private void forDaoPackageNoGetterSetter(){}
+
+    @Before("forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice(){
         System.out.println("======>>> Executing @Before advice on addAccount()");
 
     }
 
-    @Before("forDaoPackage()")
+    @Before("forDaoPackageNoGetterSetter()")
     public void performApiAnalytics(){
         System.out.println("======>>> Performing API analytics");
 
