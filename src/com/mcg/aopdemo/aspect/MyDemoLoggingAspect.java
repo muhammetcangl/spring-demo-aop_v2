@@ -3,6 +3,7 @@ package com.mcg.aopdemo.aspect;
 import com.mcg.aopdemo.Account;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
@@ -14,6 +15,18 @@ import java.util.List;
 @Component
 @Order(2)
 public class MyDemoLoggingAspect {
+
+    @AfterThrowing(pointcut = "execution(* com.mcg.aopdemo.dao.AccountDAO.findAccounts(..))", throwing = "exception")
+    public void afterThhrowingFindAccountsAdvice(JoinPoint joinPoint, Throwable exception){
+
+        // print out which method we are advising on
+        String method = joinPoint.getSignature().toShortString();
+        System.out.println("=========>>> Executing @AfterThrowing on method: " + method);
+
+        // log the exception
+        System.out.println("=========>>> The exception is: " + exception);
+    }
+
 
     // add a new advice for @AfterReturning on the findAccounts method
     @AfterReturning(pointcut = "execution(* com.mcg.aopdemo.dao.AccountDAO.findAccounts(..))", returning = "result")

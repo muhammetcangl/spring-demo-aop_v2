@@ -1,12 +1,11 @@
 package com.mcg.aopdemo;
 
 import com.mcg.aopdemo.dao.AccountDAO;
-import com.mcg.aopdemo.dao.MembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 
-public class AfterReturningDemoApp {
+public class AfterThrowingDemoApp {
 
     public static void main(String[] args) {
 
@@ -18,10 +17,17 @@ public class AfterReturningDemoApp {
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 
         // call method to find the accounts
-        List<Account> accounts = accountDAO.findAccounts(false);
+        List<Account> accounts = null;
 
+        try {
+            // add a boolean flag to simulate exception
+            boolean tripWire = true;
+            accountDAO.findAccounts(tripWire);
+        } catch (Exception ex){
+            System.out.println("Main program ... caught exception: " + ex);
+        }
         // display the accounts
-        System.out.println("Main Program: AfterReturningDemoApp");
+        System.out.println("Main Program: AfterThrowingDemoApp");
         System.out.println("-----");
 
         System.out.println(accounts);
