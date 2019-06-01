@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d6cecf6-24a2-4d29-81d8-260aec11f6c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/McgAopExpressions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyApiAnalyticsAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyCloudLogAsyncAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/mcg/aopdemo/AfterReturningDemoApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcg/aopdemo/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcg/aopdemo/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyDemoLoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyDemoLoggingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mcg/aopdemo/dao/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mcg/aopdemo/dao/AccountDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +23,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/dao/AccountDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="41" column="60" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
+            <state relative-caret-position="106">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/AfterReturningDemoApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -47,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/MainDemoApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="330">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyApiAnalyticsAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="243">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyDemoLoggingAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            <state relative-caret-position="256">
+              <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,9 +116,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="138">
+              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
               <folding>
+                <element signature="e#131#132#0" expanded="true" />
                 <element signature="e#158#159#0" expanded="true" />
               </folding>
             </state>
@@ -160,14 +170,15 @@
         <option value="$PROJECT_DIR$/src/com/mcg/springdemo/SwimJavaConfigDemoApp.java" />
         <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/dao/DemoConfig.java" />
         <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/DemoConfig.java" />
-        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/Account.java" />
         <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/dao/MembershipDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/dao/AccountDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/MainDemoApp.java" />
         <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/McgAopExpressions.java" />
         <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyCloudLogAsyncAspect.java" />
-        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyDemoLoggingAspect.java" />
         <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyApiAnalyticsAspect.java" />
+        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/MainDemoApp.java" />
+        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/dao/AccountDAO.java" />
+        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/AfterReturningDemoApp.java" />
+        <option value="$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyDemoLoggingAspect.java" />
       </list>
     </option>
   </component>
@@ -228,7 +239,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ToDoListDemo-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -238,6 +249,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mcg.aopdemo" />
       <recent name="com.mcg.springdemo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -256,13 +268,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainDemoApp">
-    <configuration name="AnnotationBeanScopeDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mcg.springdemo.AnnotationBeanScopeDemoApp" />
+  <component name="RunManager" selected="Application.AfterReturningDemoApp">
+    <configuration name="AfterReturningDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mcg.aopdemo.AfterReturningDemoApp" />
       <module name="spring-demo-aop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mcg.springdemo.*" />
+          <option name="PATTERN" value="com.mcg.aopdemo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -270,8 +282,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnnotationDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.mcg.springdemo.AnnotationDemoApp" />
+    <configuration name="AnnotationBeanScopeDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mcg.springdemo.AnnotationBeanScopeDemoApp" />
       <module name="spring-demo-aop" />
       <extension name="coverage">
         <pattern>
@@ -324,11 +336,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AfterReturningDemoApp" />
         <item itemvalue="Application.MainDemoApp" />
         <item itemvalue="Application.SwimJavaConfigDemoApp" />
         <item itemvalue="Application.JavaConfigDemoApp" />
         <item itemvalue="Application.AnnotationBeanScopeDemoApp" />
-        <item itemvalue="Application.AnnotationDemoApp" />
       </list>
     </recent_temporary>
   </component>
@@ -345,7 +357,7 @@
       <workItem from="1558774745268" duration="13413000" />
       <workItem from="1559308668649" duration="9544000" />
       <workItem from="1559322349748" duration="518000" />
-      <workItem from="1559370645923" duration="4583000" />
+      <workItem from="1559370645923" duration="10569000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1558778290198</created>
@@ -473,17 +485,31 @@
       <option name="project" value="LOCAL" />
       <updated>1559373818043</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Ordering aspects with @Order annotation">
+      <created>1559375360482</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1559375360482</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Reading method arguments.">
+      <created>1559385321379</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1559385321379</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28058000" />
+    <option name="totallyTimeSpent" value="34044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="686" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26136363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26136363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -492,7 +518,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.3303411" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.3303411" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,7 +564,9 @@
     <MESSAGE value="Pointcut expressions with Parameter types(v2)." />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Combining pointcuts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Combining pointcuts." />
+    <MESSAGE value="Ordering aspects with @Order annotation" />
+    <MESSAGE value="Reading method arguments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reading method arguments." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/applicationContext.xml" />
@@ -557,11 +585,32 @@
     <entry file="file://$PROJECT_DIR$/src/com/mcg/springdemo/SportConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mcg/springdemo/AnnotationBeanScopeDemoApp.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mcg/springdemo/JavaConfigDemoApp.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/McgAopExpressions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyCloudLogAsyncAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="138">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
           <folding>
+            <element signature="e#131#132#0" expanded="true" />
             <element signature="e#158#159#0" expanded="true" />
           </folding>
         </state>
@@ -584,50 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/dao/AccountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="41" column="60" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/MainDemoApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/McgAopExpressions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyCloudLogAsyncAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyDemoLoggingAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="330">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -636,8 +645,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyApiAnalyticsAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="243">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/dao/AccountDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/AfterReturningDemoApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcg/aopdemo/aspect/MyDemoLoggingAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
