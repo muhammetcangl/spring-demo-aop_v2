@@ -4,8 +4,11 @@ import com.mcg.aopdemo.dao.AccountDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class AfterThrowingDemoApp {
+
+    private static Logger logger = Logger.getLogger(AfterThrowingDemoApp.class.getName());
 
     public static void main(String[] args) {
 
@@ -24,14 +27,14 @@ public class AfterThrowingDemoApp {
             boolean tripWire = true;
             accountDAO.findAccounts(tripWire);
         } catch (Exception ex){
-            System.out.println("Main program ... caught exception: " + ex);
+            logger.info("Main program ... caught exception: " + ex);
         }
         // display the accounts
-        System.out.println("Main Program: AfterThrowingDemoApp");
-        System.out.println("-----");
+        logger.info("Main Program: AfterThrowingDemoApp");
+        logger.info("-----");
 
-        System.out.println(accounts);
-        System.out.println("\n");
+        logger.info(accounts.toString());
+        logger.info("\n");
 
         // close the context
         context.close();

@@ -5,14 +5,18 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.util.logging.Logger;
+
 @Aspect
 @Component
 @Order(3)
 public class MyApiAnalyticsAspect {
 
+    private static Logger logger = Logger.getLogger(MyApiAnalyticsAspect.class.getName());
+
     @Before("com.mcg.aopdemo.aspect.McgAopExpressions.forDaoPackageNoGetterSetter()")
     public void performApiAnalytics(){
-        System.out.println("======>>> Performing API analytics");
+        logger.info("======>>> Performing API analytics");
 
     }
 

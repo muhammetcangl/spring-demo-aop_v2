@@ -2,23 +2,66 @@ package com.mcg.aopdemo.aspect;
 
 import com.mcg.aopdemo.Account;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @Aspect
 @Component
 @Order(2)
 public class MyDemoLoggingAspect {
 
+    private Logger logger = Logger.getLogger(getClass().getName());
+
+    @Around("execution(* com.mcg.aopdemo.service.*.getFortune(..))")
+    public Object aroundGetFortune(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
+
+        // print out method we are advising on
+        // print out which method we are advising on
+        String method = proceedingJoinPoint.getSignature().toShortString();
+        logger.info("=========>>> Executing @Around on method: " + method);
+
+        // get begin timestamp
+        long begin = System.currentTimeMillis();
+
+        // now, let's execute the method
+        Object result = null;
+
+        try {
+            result = proceedingJoinPoint.proceed();
+        } catch (Exception ex){
+
+            // log the exception
+            logger.warning(ex.getMessage());
+
+            // give user a custom message
+            result = "Major accident! But no worries, your private AOP helicopter is on the way!";
+
+            // rethrow exception
+            //throw ex;
+
+        }
+
+        // get end timestamp
+        long end = System.currentTimeMillis();
+
+        // compute duration and display it
+        long duration = end - begin;
+        logger.info("=====>> Duration: "+ duration / 1000.0 + " seconds");
+
+        return result;
+    }
+
     @After("execution(* com.mcg.aopdemo.dao.AccountDAO.findAccounts(..))")
     public void afterFinallyFindAccountsAccountsAdvice(JoinPoint joinPoint){
 
         // print out which method we are advising on
         String method = joinPoint.getSignature().toShortString();
-        System.out.println("=========>>> Executing @After (finally) on method: " + method);
+        logger.info("=========>>> Executing @After (finally) on method: " + method);
     }
 
     @AfterThrowing(pointcut = "execution(* com.mcg.aopdemo.dao.AccountDAO.findAccounts(..))", throwing = "exception")
@@ -26,10 +69,10 @@ public class MyDemoLoggingAspect {
 
         // print out which method we are advising on
         String method = joinPoint.getSignature().toShortString();
-        System.out.println("=========>>> Executing @AfterThrowing on method: " + method);
+        logger.info("=========>>> Executing @AfterThrowing on method: " + method);
 
         // log the exception
-        System.out.println("=========>>> The exception is: " + exception);
+        logger.info("=========>>> The exception is: " + exception);
     }
 
 
@@ -39,10 +82,10 @@ public class MyDemoLoggingAspect {
 
         // print out which method we are advising on
         String method = joinPoint.getSignature().toShortString();
-        System.out.println("=========>>> Executing @AfterRetuning on method: " + method);
+        logger.info("=========>>> Executing @AfterRetuning on method: " + method);
 
         // print out the results of the method call
-        System.out.println("=========>>> result is :" + result);
+        logger.info("=========>>> result is :" + result);
 
         //let's post-process the data ... let's modify it :-)
 
@@ -68,22 +111,22 @@ public class MyDemoLoggingAspect {
 
     @Before("com.mcg.aopdemo.aspect.McgAopExpressions.forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice(JoinPoint joinPoint){
-        System.out.println("======>>> Executing @Before advice on addAccount()");
+        logger.info("======>>> Executing @Before advice on addAccount()");
 
         // display the method signature
-        System.out.println(joinPoint.getSignature());
+        logger.info(joinPoint.getSignature().toString());
 
         // display method arguments
         Object[] args = joinPoint.getArgs();
         for (Object arg : args){
-            System.out.println(arg);
+            logger.info(arg.toString());
 
             if(arg instanceof Account){
                 // downcast and print Accoun specific stuff
                 Account account = (Account) arg;
 
-                System.out.println("account name: " + account.getName());
-                System.out.println("account level: " + account.getLevel());
+                logger.info("account name: " + account.getName());
+                logger.info("account level: " + account.getLevel());
             }
         }
 

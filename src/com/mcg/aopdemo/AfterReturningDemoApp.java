@@ -5,8 +5,11 @@ import com.mcg.aopdemo.dao.MembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class AfterReturningDemoApp {
+
+    private static Logger logger = Logger.getLogger(AfterReturningDemoApp.class.getName());
 
     public static void main(String[] args) {
 
@@ -21,11 +24,11 @@ public class AfterReturningDemoApp {
         List<Account> accounts = accountDAO.findAccounts(false);
 
         // display the accounts
-        System.out.println("Main Program: AfterReturningDemoApp");
-        System.out.println("-----");
+        logger.info("Main Program: AfterReturningDemoApp");
+        logger.info("-----");
 
-        System.out.println(accounts);
-        System.out.println("\n");
+        logger.info(accounts.toString());
+        logger.info("\n");
 
         // close the context
         context.close();
